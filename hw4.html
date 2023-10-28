@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма 1</title>
+    <style>
+        body 
+        {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        fieldset 
+        {
+          background-color: #fdd1b1; border-radius: 17px;
+          margin-top: 1em;
+        }
+        
+        legend 
+        {
+          background-color: rgb(222, 104, 1);
+          color: white;
+          padding: 5px 10px;
+        }
+
+        input[type="submit"]{
+            background-color: rgb(222, 104, 1);
+            color: #ffffff;
+        }
+        
+        input 
+        {
+          margin: 5px;
+        }
+        </style>
+</head>
+<body>
+
+<form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+    <fieldset>
+        <legend>
+            КОНТАКТНАЯ ИНФОРМАЦИЯ
+        </legend>
+        <p>
+            Имя: <input name="last_name" size=20 type="Text" value="Акакий">
+        </p>
+        <p>
+            Номер: <input name="age" size=20 type="Number" value="0">
+        </p>
+        <p>
+            Дата посещения: <input name="user_date" type="date" value='2000-01-01'>
+        </p>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            ПЕРСОНАЛЬНАЯ ИНФОРМАЦИЯ
+        </legend>
+        <p>
+            Возраст: <input name="age" size=20 type="Number" value="0">
+        </p>
+        <p>
+            Любимая кухня: <select name="kitchen">
+                <OPTION value="Русская">Русская</OPTION>
+                <OPTION value="Японская">Японская</OPTION>
+                <OPTION value="Татарская">Татарская</OPTION>
+                <OPTION value="Мексиканская">Мексиканская</OPTION>
+                <OPTION value="Турецкая">Турецкая</OPTION>
+                <OPTION value="Израильская">Израильская</OPTION>
+                <OPTION value="Грузинская">Грузинская</OPTION>
+            </select>
+        </p>
+        <p>
+            Какие блюда Вы бы хотели видеть в меню: <br>
+            <TEXTAREA cols=80 name="textarea" rows=4></TEXTAREA>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            ОЦЕНКА НАШЕГО ЗАВЕДЕНИЯ
+        </legend>
+        <p>
+            Почему Вы выбрали наше заведение?
+            <br>
+            <br>
+                    <input name="place" type="Radio" value="Недалеко от дома/работы">Недалеко от дома/работы<br>
+                    <input checked name="place" type="Radio" value="Увидел рекламу">Увидел рекламу<br>
+                    <input checked name="place" type="Radio" value="Посоветовали">Посоветовали<br>
+                    <input checked name="place" type="Radio" value="Оптимальное соотношение цены и качества">Оптимальное соотношение цены и качества
+        </p>
+    </fieldset>
+
+    <fieldset>
+            <legend>
+                КАКУЮ СУММУ ВЫ ПОТРАТИЛИ?
+            </legend>
+            <p>
+                        <input name="place" type="Radio" value="Больше 100 у.е.">Больше 100 у.е.<br>
+                        <input checked name="place" type="Radio" value="Меньше 100 у.е.">Меньше 100 у.е.
+            </p>
+    </fieldset>
+    <p>
+        <input name="submit" type="Submit" value="Отправить">
+    </p>
+
+</form>
+</body>
+</html>
