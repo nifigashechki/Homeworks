@@ -1,0 +1,81 @@
+
+<HTML lang="ru">
+
+    <HEAD>
+      <!-- Meta http equivalent was here                                                     -->
+      <TITLE>Угадайка</TITLE>
+    </HEAD>
+  
+    <BODY bgcolor="#e6c6c2" text="black">
+  
+      <H1 style= "font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" >Угадайка</H1>
+      <HR>
+     <SCRIPT language=JavaScript>
+     <!--
+  
+       function getRandomInt (min, max) 
+       {
+        min = Math.ceil (min)
+        max = Math.floor (max)
+        return Math.floor (Math.random() * (max - min) + min); 
+       }
+
+       function inputAndCheckRange (min, max)
+       {
+        answer = prompt("Число в [" + min + " , " + max + "] Ваш ход:", "");
+        num = parseInt(answer, 10);
+        if (num < min) 
+        {
+            alert ("Слишком маленькое число, ты обязательно сможешь придумать что-то больше " + min)
+            return null
+        }
+        if (num > max) 
+        {
+            alert ("Слишком большое число, ты обязательно сможешь придумать что-то меньше " + max)
+            return null
+        }
+        return num 
+       }
+       // Игра Угадайка
+       function FindNum()
+       {
+            var a = 100;        // начало интервала
+            var b = 200;        // конец интервала
+            // Генерация случайного числа
+            var number = getRandomInt (a, b + 1);
+            var answer = 0;     // ответ пользователя
+            alert ("Задумано число от " + a + " до " + b + ". Попробуйте его отгадать!");
+    
+            // цикл игры
+        
+            // ввод числа пользователя
+            do 
+            {
+                answer = inputAndCheckRange (a, b);
+            }
+            while (answer == null)
+            
+            alert("Мы ценим ваши усилия, попробуйте еще раз!");
+             
+            do 
+            {
+                answer = inputAndCheckRange (a, b);
+            }
+            while (answer == null)
+
+            // игра закончена
+            alert("Вы угадали число за 2 попытки: " + answer);
+       }
+  
+       // Запуск игры
+       FindNum()
+  
+      //-->
+     </SCRIPT>
+      <P style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        Игра закончена!
+       </p>
+       <img src = "Positive and Supportive Quotes About Mental Health.jpg" height="80%">
+    </BODY>
+  
+  </HTML>
