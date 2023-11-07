@@ -6,14 +6,17 @@
                 var x2 = Number(x) * Number(x);
                 var y2 = Number (y) * Number (y);
                 var z2 = Number (z) * Number (z);
+                var result = "yes";
                 if (z2 == (x2 + y2)) 
                 {
                     alert ("yes");
                 }
                 else 
                 {
+                    result = "no";
                     alert ("no")
                 }
+                document.getElementsByName('result').value = result;
                 return true;
             }
         </script>
@@ -23,6 +26,14 @@
             1009. Даны вещественные числа: X, Y , Z. Определить, существует ли треугольник с такими длинами сторон и, если существует, будет ли он прямоугольным. 
         </p>
         <form id="data">
+            <p>
+                для поисковика:
+                <input name="q" value="search">
+            </p>
+            <p>
+                формулировка задачи
+                <input name="formulation"  value="Даны вещественные числа: X, Y , Z. Определить, существует ли треугольник с такими длинами сторон и, если существует, будет ли он прямоугольным."></li>
+            </p>
             <p> 
                 X: &nbsp;
                 <input placeholder="x" id="x">
@@ -36,6 +47,11 @@
                 <input placeholder="z" id="z">
             </p>
         </form>
+        <p>
+            результат решения:
+            <input name="result" id="result" value="...">
+        </p>
+
         <p> 
             <button onclick="is_right_triangle (
                                 document.getElementById ('x').value,
@@ -43,8 +59,10 @@
                                 document.getElementById ('z').value)">
                 Проверить значение
             </button>
+
+            <input id="send" type="button" value="Отправить">
+
         </p>
 
-        
     </body>
 </html>
