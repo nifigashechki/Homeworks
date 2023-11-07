@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <script>
+            function is_right_triangle (x, y, z)
+            {
+                var x2 = Number(x) * Number(x);
+                var y2 = Number (y) * Number (y);
+                var z2 = Number (z) * Number (z);
+                if (z2 == (x2 + y2)) 
+                {
+                    alert ("yes");
+                }
+                else 
+                {
+                    alert ("no")
+                }
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <p>
+            1009. Даны вещественные числа: X, Y , Z. Определить, существует ли треугольник с такими длинами сторон и, если существует, будет ли он прямоугольным. 
+        </p>
+        <form id="data">
+            <p> 
+                X: &nbsp;
+                <input placeholder="x" id="x">
+            </p>
+            <p> 
+                Y: &nbsp;
+                <input placeholder="y" id="y">
+            </p>
+            <p> 
+                Z: &nbsp;
+                <input placeholder="z" id="z">
+            </p>
+        </form>
+        <p> 
+            <button onclick="is_right_triangle (
+                                document.getElementById ('x').value,
+                                document.getElementById ('y').value,
+                                document.getElementById ('z').value)">
+                Проверить значение
+            </button>
+        </p>
+
+        
+    </body>
+</html>
